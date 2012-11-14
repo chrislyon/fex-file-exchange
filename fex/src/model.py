@@ -10,6 +10,9 @@ class Entite(Entity):
     nom = Field(Unicode(30))
     description = Field(UnicodeText, default=u"" )
     typ = Field(Unicode(10), default='CLIENT')
+    parent = ManyToOne('Entite')
+    def __repr__(self):
+        return '<Entite : %s : %s : %s>' % (self.codent, self.typ, self.parent)
 
 class User(Entity):
     using_options(tablename='USER')
@@ -18,6 +21,8 @@ class User(Entity):
     entite = ManyToOne('Entite')
     email = Field(Unicode(20))
     IsAdmin = Field(Boolean, default=False)
+    def __repr__(self):
+        return '<User : %s : %s : %s>' % (self.codusr, self.entite, self.IsAdmin)
 
 class Fex(Entity):
     using_options(tablename='FEX')
@@ -31,6 +36,6 @@ class Fex(Entity):
     date_depot = Field(DateTime)
     date_reception = Field(DateTime)
 
-def __repr__(self):
-    return '<File Exchange %s %s>' % (self.nom, self.status)
+    def __repr__(self):
+        return '<File Exchange %s %s>' % (self.nom, self.status)
 

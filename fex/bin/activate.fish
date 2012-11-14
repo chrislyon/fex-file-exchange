@@ -27,7 +27,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/chris/Bureau/DVP/python/fex/fex"
+set -gx VIRTUAL_ENV "/home/chris/Bureau/DVP/python/fex-file-exchange/fex"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

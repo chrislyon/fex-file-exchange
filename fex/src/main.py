@@ -1,3 +1,5 @@
+#! python
+
 from elixir import *
 from model import *
 import datetime
@@ -73,7 +75,7 @@ def populate():
     pop_user()
     #pop_fex()
 
-setup_all()
+setup_all(True)
 create_all()
 
 populate()

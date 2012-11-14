@@ -1,0 +1,40 @@
+
+
+Tout vient de l'entite et de son type
+
+Typ = ROOT          => Entite principale
+typ = CLIENT        => Entite Tiers 
+
+ROOT+ADMIN  => Peu tout voir tout creer
+
+ROOT+USER   =>  peut voir ses fex
+                peut creer des fexs
+                peut deposer des fichiers dans ses fex
+                peut recuperer un fichiers dans ses fex
+
+CLIENT+ADMIN    => peut voir les fexs
+                => peut depose des fichiers dans les fexs de l'entite
+                => peut recuperer des fichiers dans ses fexs
+
+ENTITE
+    Fichier des Entites
+    ROOT = SRA
+
+USER
+    FIchiers des utilisateurs 
+
+FEX
+    Fichiers des echanges de fichiers
+
+
+HUB
+    Centre d'echanges
+    Cette classe va regrouper les fonctions de bases comme
+    La creation et l'initialisation de la base de donnees
+    Le stockage des parametres comme les repertoires de bases
+    Les fonctions basiques comme
+    creation d'entite
+    creation d'utilisateur
+    liste_fex(USER)
+    depot(FEX,USER)
+    retrait(FEX,USER)
